@@ -1,0 +1,21 @@
+{snippet modal}
+	<div n:if="$visible" class="modal fade" id="{$id}" tabindex="-1" role="dialog">
+		<div class="modal-dialog window-popup blog-post-popup" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close m_r-3 m_t-3" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+
+					{control control}
+
+					<script>
+						if (!window.wchModal) window.wchModal = [];
+						if (typeof window.wchModal === 'function') { window.wchModal({$id}) }
+						else { window.wchModal.push({$id}); }
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+{/snippet}

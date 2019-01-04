@@ -1,0 +1,9 @@
+{
+	"name": "webchemistry/modal",
+	"type": "library",
+	"autoload": {
+		"psr-4": {
+			"WebChemistry\\Modal\\": ["src/"]
+		}
+	}
+}
